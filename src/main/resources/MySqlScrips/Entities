@@ -1,0 +1,21 @@
+------------Doctor
+CREATE TABLE Doctor (
+    id BIGINT NOT NULL PRIMARY KEY,
+    name VARCHAR(255),
+    lastName VARCHAR(255),
+    password VARCHAR(255),
+    email VARCHAR(255),
+    fiscalCode VARCHAR(255),
+    username VARCHAR(255)
+);
+
+------------Patient
+CREATE TABLE Patient (
+    id BIGINT NOT NULL PRIMARY KEY,
+    name VARCHAR(255),
+    lastName VARCHAR(255),
+    password VARCHAR(255),
+    email VARCHAR(255),
+    fiscalCode VARCHAR(255),
+    username VARCHAR(255)
+);
