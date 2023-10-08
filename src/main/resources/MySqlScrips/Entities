@@ -1,6 +1,6 @@
 ------------Doctor
-CREATE TABLE Doctor (
-    id BIGINT NOT NULL PRIMARY KEY,
+CREATE TABLE doctor (
+    id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255),
     lastName VARCHAR(255),
     password VARCHAR(255),
@@ -10,8 +10,8 @@ CREATE TABLE Doctor (
 );
 
 ------------Patient
-CREATE TABLE Patient (
-    id BIGINT NOT NULL PRIMARY KEY,
+CREATE TABLE patient (
+    id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255),
     lastName VARCHAR(255),
     password VARCHAR(255),

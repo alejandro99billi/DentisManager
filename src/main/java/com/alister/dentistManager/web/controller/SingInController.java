@@ -2,7 +2,10 @@ package com.alister.dentistManager.web.controller;
 
 import com.alister.dentistManager.dto.models.Doctor;
 import com.alister.dentistManager.service.impl.SingInServiceImpl;
+import com.alister.dentistManager.web.exception.DoctorNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,7 +20,6 @@ public class SingInController {
 
     // CREATE
     @PostMapping
-
     public Doctor createDoctor( @RequestBody Doctor doctor) {
         return service.saveDoctor(doctor);
     }
@@ -45,5 +47,12 @@ public class SingInController {
     public void deleteDoctor(@PathVariable Long id) {
        service.deleteDoctor(id);
     }
+
+    //ExceptionLauncher
+    @ExceptionHandler(DoctorNotFoundException.class)
+    public ResponseEntity<String> handleDoctorNotFoundException(DoctorNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
 
 }
