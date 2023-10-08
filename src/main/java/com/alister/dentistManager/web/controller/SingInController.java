@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/doctors")
+
 public class SingInController {
     //Hago todas las llamadas de interes
     @Autowired
@@ -16,7 +17,8 @@ public class SingInController {
 
     // CREATE
     @PostMapping
-    public Doctor createDoctor(@RequestBody Doctor doctor) {
+
+    public Doctor createDoctor( @RequestBody Doctor doctor) {
         return service.saveDoctor(doctor);
     }
 
