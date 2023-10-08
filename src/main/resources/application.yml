@@ -1,0 +1,24 @@
+spring:
+  mail:
+    host: localhost
+    port: 1025
+    username: # Dejar en blanco para MailHog
+    password:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/dentist_manager
+    username: root
+    password: mypassword
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      properties:
+        dialect: org.hibernate.dialect.MariaDBDialect
+    show-sql: true
+
+springdoc:
+    api-docs:
+      path: /api-docs
+    swagger-ui:
+      path: /swagger-ui.html
+      enabled: true

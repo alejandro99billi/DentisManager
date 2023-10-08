@@ -1,0 +1,5 @@
+docker-compose up -d
+
+docker run --name mariadb_container -e MYSQL_ROOT_PASSWORD=mypassword -p 3306:3306 -d mariadb:latest
+
+docker exec -it mariadb_container mysql -uroot -pmypassword
